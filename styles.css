@@ -96,7 +96,7 @@ nav ul form button:hover{
 }
 .box4 button{
     display:flex;
-    justify-content: left;
+    justify-content: right;
 }
 button{
     padding:25px;
