@@ -80,42 +80,71 @@ nav ul form button:hover{
     padding: 50px; 
     border-radius: 30px;
 }
-.box {
+
+.welcome-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    padding: 20px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.box3 h2 {
-    margin: 0 20px;
-    text-align: center;
+
+.welcome-image {
+    flex: 1;
+    max-width: 45%;
 }
-.box3 p{
-    text-align: center;
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.box4 button{
-    display:flex;
-    justify-content: right;
+
+.welcome-content {
+    flex: 1;
+    text-align: left;
 }
-button{
-    padding:25px;
+
+.welcome-content h2 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.welcome-content p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.welcome-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.welcome-buttons button {
+    padding: 15px 30px;
     border-radius: 10px;
     font-size: 1.1rem;
     background-color: #000000;
-    font-family:Arial, Helvetica, sans-serif;
-    color: #fff;
-    box-shadow: 0 10px 20px 10px 20px rgba(0, 0, 0, 0.8);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-button a{
+
+.welcome-buttons button a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
-button:hover{
-    padding:25px;
-    font-size: 1.3rem;
-    transition: 0.5s ease all; 
+
+.welcome-buttons button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
 }
 
 /* ---------- Inicio ---------- */
@@ -335,22 +364,41 @@ footer {
     }
 
     /* Secciones generales */
-    #welcome, #inicio, #contact {
+    #welcome {
         margin: 10px 20px;
         padding: 20px;
     }
 
-    /* Box contenedor */
-    .box {
-        padding: 10px;
+    .welcome-container {
         flex-direction: column;
+        gap: 20px;
     }
 
-    /* Muelas */
-    .muela {
-        transform: scale(0.8);
+    .welcome-image {
+        max-width: 100%;
     }
 
+    .welcome-content {
+        text-align: center;
+    }
+
+    .welcome-content h2 {
+        font-size: 1.5em;
+    }
+
+    .welcome-content p {
+        font-size: 1em;
+    }
+
+    .welcome-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-buttons button {
+        width: 100%;
+        padding: 12px 20px;
+    }
     /* Servicios */
     .servicio {
         flex-direction: column;
@@ -449,6 +497,14 @@ footer {
     nav ul {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .welcome-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .welcome-image {
+        max-width: 100%;
     }
 
     .servicio {
